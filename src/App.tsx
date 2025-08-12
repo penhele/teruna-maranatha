@@ -16,9 +16,7 @@ function App() {
 
         <div className="flex gap-5 p-5 bg-white shadow-lg backdrop-blur-md rounded-lg">
           <div>
-            <h1 className="font-semibold text-2xl mb-3">
-              Apa itu Pelkat Pelkat PT?
-            </h1>
+            <h1 className="titleSection">Apa itu Pelkat Pelkat PT?</h1>
             <p>
               Pelayanan Kategorial Persekutuan Teruna (Pelkat PT) adalah bagian
               dari unit misioner GPIB dengan tugas utamanya untuk membina dan
@@ -37,7 +35,7 @@ function App() {
             className="md:w-1/2 h-auto rounded-lg aspect-video object-contain bg-gray-200"
           />
           <div>
-            <h1 className="font-semibold text-2xl mb-3">
+            <h1 className="titleSection">
               Persekutuan Teruna ​GPIB Maranatha Jakarta
             </h1>
             <p>

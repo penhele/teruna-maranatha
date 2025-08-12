@@ -29,7 +29,7 @@ function PengurusCard() {
 
   return (
     <div className="flex flex-col gap-5 p-5 bg-amber-50 shadow-lg backdrop-blur-md rounded-lg text-center items-center">
-      <h1 className="font-semibold text-2xl mb-3">
+      <h1 className="titleSection">
         Pengurus Pelkat PT GPIB Maranatha Jakarta Periode 2025-2027
       </h1>
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-5">

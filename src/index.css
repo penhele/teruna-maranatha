@@ -1,6 +1,10 @@
 @import "tailwindcss";
 @import "tailwind-scrollbar-hide/v4";
 
+.titleSection {
+  @apply font-semibold text-xl sm:text-2xl mb-3;
+}
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
