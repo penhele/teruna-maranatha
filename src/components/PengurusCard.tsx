@@ -18,7 +18,8 @@ function PengurusCard() {
   const fetchPengurus = async () => {
     const { data, error } = await supabase
       .from("PengurusPersekutuanTeruna")
-      .select("*").order("id", {ascending: true});
+      .select("*")
+      .order("id", { ascending: true });
 
     if (error) {
       console.log("Error fetching: ", error);
@@ -35,7 +36,10 @@ function PengurusCard() {
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-5">
         {imageList.map((item) => (
           <div key={item.id} className="flex flex-col gap-0.5">
-            <img src={item.profile_url} className="rounded-lg max-w-3xs h-full object-cover" />
+            <img
+              src={item.profile_url}
+              className="rounded-lg max-w-3xs h-full object-cover"
+            />
             <p className="bg-amber-100">{item.name}</p>
             <p className="font-semibold">{item.position}</p>
           </div>
