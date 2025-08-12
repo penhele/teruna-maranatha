@@ -2,6 +2,7 @@ import NavigationBar from "./components/NavigationBar";
 import Slider from "./components/Slider";
 import logoPelkatPt from "./assets/images/logo-pelkat-pt.png";
 import PengurusCard from "./components/PengurusCard";
+import JadwalIbadah from "./components/JadwalIbadah";
 
 function App() {
   return (
@@ -11,6 +12,8 @@ function App() {
       <Slider />
 
       <section className="flex flex-col gap-5">
+        <JadwalIbadah />
+
         <div className="flex gap-5 p-5 bg-white shadow-lg backdrop-blur-md rounded-lg">
           <div>
             <h1 className="font-semibold text-2xl mb-3">
@@ -22,7 +25,10 @@ function App() {
               melayani warga GPIB dalam kategori usia 13-17 tahun.
             </p>
           </div>
-          <img src={logoPelkatPt} className=" max-h-[150PX] w-auto" />
+          <img
+            src={logoPelkatPt}
+            className="max-h-[100PX] sm:max-h-[150PX] w-auto"
+          />
         </div>
 
         <div className="flex flex-col md:flex-row gap-5 p-5 bg-white shadow-lg backdrop-blur-md rounded-lg">
