@@ -11,7 +11,6 @@ function Slider() {
     image_url: string;
   };
 
-
   useEffect(() => {
     fetchImageKegiatan();
   }, []);
@@ -31,7 +30,7 @@ function Slider() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) =>
-        prevIndex === imageList.length - 1 ? 0 : prevIndex + 1
+        prevIndex === imageList.length - 1 ? 0 : prevIndex + 1,
       );
     }, 3000);
 
