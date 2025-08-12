@@ -20,7 +20,7 @@ function NavigationBar() {
         <img src={logoPelkatPt} className="w-10" />
         <h1 className="font-medium text-lg">Pelkat PT Maranatha Jakarta</h1>
       </div>
-      <div className="hidden sm:flex gap-3">
+      {/* <div className="hidden sm:flex gap-3">
         {menu.map((item, index) => (
           <div key={index}>
             <p className="font-medium text-lg hover:text-blue-400 cursor-pointer">
@@ -29,7 +29,7 @@ function NavigationBar() {
           </div>
         ))}
       </div>
-      <IoReorderThree className="sm:hidden size-6" />
+      <IoReorderThree className="sm:hidden size-6" /> */}
     </div>
   );
 }
