@@ -1,4 +1,5 @@
 import logoPelkatPt from "./../assets/images/logo-pelkat-pt.png";
+import { IoReorderThree } from "react-icons/io5";
 
 function NavigationBar() {
   const menu = [
@@ -19,15 +20,16 @@ function NavigationBar() {
         <img src={logoPelkatPt} className="w-10" />
         <h1 className="font-medium text-lg">Pelkat PT Maranatha Jakarta</h1>
       </div>
-      <div className="flex gap-3">
-        {menu.map((item) => (
-          <div>
+      <div className="hidden sm:flex gap-3">
+        {menu.map((item, index) => (
+          <div key={index}>
             <p className="font-medium text-lg hover:text-blue-400 cursor-pointer">
               {item.name}
             </p>
           </div>
         ))}
       </div>
+      <IoReorderThree className="sm:hidden size-6" />
     </div>
   );
 }
