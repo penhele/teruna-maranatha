@@ -1,18 +1,18 @@
 import logoPelkatPt from "./../assets/images/logo-pelkat-pt.png";
-import { IoReorderThree } from "react-icons/io5";
+// import { IoReorderThree } from "react-icons/io5";
 
 function NavigationBar() {
-  const menu = [
-    {
-      name: "Beranda",
-    },
-    {
-      name: "Tentang",
-    },
-    {
-      name: "Kontak",
-    },
-  ];
+  // const menu = [
+  //   {
+  //     name: "Beranda",
+  //   },
+  //   {
+  //     name: "Tentang",
+  //   },
+  //   {
+  //     name: "Kontak",
+  //   },
+  // ];
 
   return (
     <div className="flex justify-between items-center mb-5">
