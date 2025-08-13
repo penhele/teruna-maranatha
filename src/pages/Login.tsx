@@ -1,3 +1,4 @@
+import { IoIosArrowBack } from "react-icons/io";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -10,7 +11,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import supabase from "@/supabase-client";
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Login() {
   const navigate = useNavigate();
@@ -25,7 +26,7 @@ function Login() {
         data: { session },
       } = await supabase.auth.getSession();
       if (session) {
-        navigate("/admin", { replace: true });
+        console.log("User sudah login:", session.user.email);
       }
     };
     checkSession();
@@ -58,6 +59,11 @@ function Login() {
     <div className="bg-[#f8f4ec]">
       <div className="flex items-center justify-center min-h-screen">
         <div className="flex flex-col gap-6 max-w-xl w-full m-5">
+          <Link to="/" className="flex gap-2 items-center">
+            <IoIosArrowBack />
+            Back to Home
+          </Link>
+
           <Card className="bg-white">
             <CardHeader>
               <CardTitle>Login to admin account</CardTitle>
