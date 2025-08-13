@@ -16,7 +16,7 @@ function Home() {
 
         <div className="flex gap-5 p-5 bg-white shadow-lg backdrop-blur-md rounded-lg">
           <div>
-            <h1 className="titleSection">Apa itu Pelkat  PT?</h1>
+            <h1 className="titleSection">Apa itu Pelkat PT?</h1>
             <p>
               Pelayanan Kategorial Persekutuan Teruna (Pelkat PT) adalah bagian
               dari unit misioner GPIB dengan tugas utamanya untuk membina dan
