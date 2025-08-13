@@ -17,7 +17,7 @@ function PengurusCard() {
     const { data, error } = await supabase
       .from("PengurusPersekutuanTeruna")
       .select("*")
-      .order("id", { ascending: true });
+      .order("id", { ascending: false });
 
     if (error) {
       console.log("Error fetching: ", error);
