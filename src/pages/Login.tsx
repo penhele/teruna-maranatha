@@ -6,9 +6,54 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import supabase from "@/supabase-client";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
+  const navigate = useNavigate();
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [message, setMessage] = useState("");
+
+  useEffect(() => {
+    const checkSession = async () => {
+      const {
+        data: { session },
+      } = await supabase.auth.getSession();
+      if (session) {
+        navigate("/admin", { replace: true });
+      }
+    };
+    checkSession();
+  }, [navigate]);
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setMessage("");
+
+    const { data, error } = await supabase.auth.signInWithPassword({
+      email: email,
+      password: password,
+    });
+
+    if (error) {
+      setMessage(error.message);
+      return;
+    }
+
+    if (data) {
+      navigate("/admin");
+      return null;
+    }
+
+    setEmail("");
+    setPassword("");
+  };
+
   return (
     <div className="bg-[#f8f4ec]">
       <div className="flex items-center justify-center min-h-screen">
@@ -19,36 +64,42 @@ function Login() {
             </CardHeader>
 
             <CardContent>
-              <form>
+              <form onSubmit={handleSubmit}>
                 <div className="flex flex-col gap-6">
                   <div className="flex flex-col gap-3">
-                    <Label htmlFor="username">Username</Label>
-                    <input
-                      id="username"
-                      type="text"
-                      placeholder="username"
-                      className="rounded-lg border-2 border-gray-300 px-4 py-2"
+                    <Label htmlFor="email">Email</Label>
+                    <Input
+                      id="email"
+                      type="email"
+                      placeholder="johndoe@gmail.com"
+                      onChange={(e) => setEmail(e.target.value)}
+                      value={email}
                       required
                     />
                   </div>
 
                   <div className="flex flex-col gap-3">
                     <Label htmlFor="password">Password</Label>
-                    <input
+                    <Input
                       id="password"
                       type="password"
                       placeholder="password"
-                      className="rounded-lg border-2 border-gray-300 px-4 py-2"
+                      onChange={(e) => setPassword(e.target.value)}
+                      value={password}
                       required
                     />
                   </div>
+
+                  {message && <p className="text-red-500 text-sm">{message}</p>}
+
+                  <CardFooter className="p-0">
+                    <Button className="w-full bg-[#ffcc84]" type="submit">
+                      Login
+                    </Button>
+                  </CardFooter>
                 </div>
               </form>
             </CardContent>
-
-            <CardFooter>
-              <Button className="w-full bg-[#ffcc84]">Login</Button>
-            </CardFooter>
           </Card>
 
           <p className="text-center">
