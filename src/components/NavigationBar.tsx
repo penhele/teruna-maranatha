@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import logoPelkatPt from "./../assets/images/logo-pelkat-pt.png";
-import { FaRegUser } from "react-icons/fa";
+// import { FaRegUser } from "react-icons/fa";
 // import { IoReorderThree } from "react-icons/io5";
 
 function NavigationBar() {
@@ -33,9 +33,9 @@ function NavigationBar() {
       </div>
       <IoReorderThree className="sm:hidden size-6" /> */}
 
-      <Link to="/login">
+      {/* <Link to="/login">
         <FaRegUser className=" cursor-pointer" />
-      </Link>
+      </Link> */}
     </div>
   );
 }

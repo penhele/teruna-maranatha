@@ -3,6 +3,7 @@ import NavigationBar from "../components/NavigationBar";
 import Slider from "../components/Slider";
 import JadwalIbadah from "../components/JadwalIbadah";
 import PengurusCard from "../components/PengurusCard";
+import { FaInstagram } from "react-icons/fa";
 
 function Home() {
   return (
@@ -29,7 +30,7 @@ function Home() {
           />
         </div>
 
-        <div className="flex flex-col md:flex-row gap-5 p-5 bg-white shadow-lg backdrop-blur-md rounded-lg">
+        <div className="flex flex-col md:flex-row gap-5 p-5 bg-[#f4f4fc] shadow-lg backdrop-blur-md rounded-lg">
           <img
             src="https://dgihpukgzlneaftwvwsx.supabase.co/storage/v1/object/public/kegiatan-teruna/kegiatan-1.jpeg"
             className="md:w-1/2 h-auto rounded-lg aspect-video object-contain bg-gray-200"
@@ -40,12 +41,29 @@ function Home() {
             </h1>
             <p>
               Merupakan bagian kecil dari Persekutuan Teruna GPIB yang ada di
-              dalam GPIB Jemaat “Maranatha” Jakarta.
+              dalam GPIB Jemaat “Maranatha” Jakarta. Persekutuan ini menjadi
+              wadah persekutuan bagi remaja atau teruna dalam jemaat, tempat di
+              mana mereka dapat bertumbuh bersama dalam iman, mengembangkan
+              potensi yang dimiliki, serta belajar melayani Tuhan dan sesama.
             </p>
           </div>
         </div>
 
         <PengurusCard />
+      </section>
+
+      <div className="my-6 h-px bg-gray-300" />
+
+      <section>
+        <div className="flex justify-between items-center mb-5">
+          <p className="text-gray-600">
+            © 2025 Persekutuan Teruna GPIB Maranatha Jakarta. All Rights
+            Reserved.
+          </p>
+          <a href="https://www.instagram.com/ptmaranathajkt" target="_blank">
+            <FaInstagram className="text-gray-600" />
+          </a>
+        </div>
       </section>
     </div>
   );
