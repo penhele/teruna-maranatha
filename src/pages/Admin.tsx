@@ -126,22 +126,23 @@ function Admin() {
         <h1>Pengurus</h1>
         <div className="relative grid grid-cols-4 gap-5">
           {imagePengurusList.map((item) => (
-            <div key={item.id} className="relative aspect-video group">
+            <label
+              key={item.id}
+              className="relative aspect-video group cursor-pointer"
+            >
               <img
                 src={item.image_url}
                 className="object-cover rounded-lg w-full h-full"
               />
               <div className="absolute inset-0 bg-gray-500/40 rounded-lg flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
-                <label className="cursor-pointer flex flex-col items-center">
-                  <MdEdit className="text-white" />
-                  <input
-                    type="file"
-                    className="hidden"
-                    onChange={(e) => uploadImagePengurus(e, item.id)}
-                  />
-                </label>
+                <MdEdit className="text-white" />
               </div>
-            </div>
+              <input
+                type="file"
+                className="hidden"
+                onChange={(e) => uploadImagePengurus(e, item.id)}
+              />
+            </label>
           ))}
         </div>
       </div>
