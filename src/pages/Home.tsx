@@ -3,6 +3,7 @@ import NavigationBar from "../components/NavigationBar";
 import Slider from "../components/Slider";
 import JadwalIbadah from "../components/JadwalIbadah";
 import PengurusCard from "../components/PengurusCard";
+import bannerBibleCamp from "./../../src/assets/images/banner-bible-camp.png";
 import { FaInstagram } from "react-icons/fa";
 
 function Home() {
@@ -12,8 +13,22 @@ function Home() {
 
       <Slider />
 
-      <section className="flex flex-col gap-5">
+      <section className="flex flex-col gap-5 ">
         <JadwalIbadah />
+
+        <div className="flex flex-col gap-5 p-5 bg-white shadow-lg backdrop-blur-md rounded-lg">
+          <h1 className="titleSection text-center">
+            Kegiatan Terdekat
+          </h1>
+          <img src={bannerBibleCamp} className="rounded-lg" />
+          <a
+            href="https://bit.ly/PendaftaranBibleCampMaranatha"
+            target="_blank"
+            className=""
+          >
+            Klik untuk mendaftar 🔗
+          </a>
+        </div>
 
         <div className="flex gap-5 p-5 bg-white shadow-lg backdrop-blur-md rounded-lg">
           <div>
