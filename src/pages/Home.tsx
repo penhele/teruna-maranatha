@@ -17,9 +17,7 @@ function Home() {
         <JadwalIbadah />
 
         <div className="flex flex-col gap-5 p-5 bg-white shadow-lg backdrop-blur-md rounded-lg">
-          <h1 className="titleSection text-center">
-            Kegiatan Terdekat
-          </h1>
+          <h1 className="titleSection text-center">Kegiatan Terdekat</h1>
           <img src={bannerBibleCamp} className="rounded-lg" />
           <a
             href="https://bit.ly/PendaftaranBibleCampMaranatha"
@@ -56,10 +54,14 @@ function Home() {
             </h1>
             <p>
               Merupakan bagian kecil dari Persekutuan Teruna GPIB yang ada di
-              dalam GPIB Jemaat “Maranatha” Jakarta. Persekutuan ini menjadi
-              wadah persekutuan bagi remaja atau teruna dalam jemaat, tempat di
-              mana mereka dapat bertumbuh bersama dalam iman, mengembangkan
-              potensi yang dimiliki, serta belajar melayani Tuhan dan sesama.
+              dalam GPIB Jemaat “Maranatha” Jakarta.{" "}
+              <span className="font-bold">TeNaR</span> adalah sebutan untuk
+              Persekutuan Teruna GPIB Maranatha Jakarta yang merupakan singkatan
+              dari{" "}
+              <span className="bg-amber-200 px-0.5">
+                Teruna Maranatha Bersinar
+              </span>
+              .
             </p>
           </div>
         </div>
@@ -71,12 +73,12 @@ function Home() {
 
       <section>
         <div className="flex justify-between items-center mb-5">
-          <p className="text-gray-600">
+          <p className="text-gray-600 text-xs">
             © 2025 Persekutuan Teruna GPIB Maranatha Jakarta. All Rights
             Reserved.
           </p>
           <a href="https://www.instagram.com/ptmaranathajkt" target="_blank">
-            <FaInstagram className="text-gray-600" />
+            <FaInstagram className="text-gray-600 text-xs" />
           </a>
         </div>
       </section>
