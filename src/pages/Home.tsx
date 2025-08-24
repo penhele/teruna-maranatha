@@ -30,7 +30,7 @@ function Home() {
 
         <div className="flex gap-5 p-5 bg-white shadow-lg backdrop-blur-md rounded-lg">
           <div>
-            <h1 className="titleSection">Apa itu Pelkat PT?</h1>
+            <h1 className="titleSection mb-3">Apa itu Pelkat PT?</h1>
             <p>
               Pelayanan Kategorial Persekutuan Teruna (Pelkat PT) adalah bagian
               dari unit misioner GPIB dengan tugas utamanya untuk membina dan
@@ -45,11 +45,11 @@ function Home() {
 
         <div className="flex flex-col md:flex-row gap-5 p-5 bg-[#f4f4fc] shadow-lg backdrop-blur-md rounded-lg">
           <img
-            src="https://dgihpukgzlneaftwvwsx.supabase.co/storage/v1/object/public/kegiatan-teruna/kegiatan-1.jpeg"
+            src="https://dgihpukgzlneaftwvwsx.supabase.co/storage/v1/object/public/kegiatan-teruna/kegiatan-5.jpeg"
             className="md:w-1/2 h-auto rounded-lg aspect-video object-contain bg-gray-200"
           />
           <div>
-            <h1 className="titleSection">
+            <h1 className="titleSection mb-3">
               Persekutuan Teruna ​GPIB Maranatha Jakarta
             </h1>
             <p>
